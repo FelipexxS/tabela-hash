@@ -1,4 +1,4 @@
-package lista;
+package hash;
 
 
 public class Lista<T> implements TADLista<T> {

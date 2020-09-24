@@ -1,4 +1,4 @@
-package lista;
+package hash;
 
 public interface TADLista<T> {
     	

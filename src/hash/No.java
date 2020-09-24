@@ -1,4 +1,4 @@
-package lista;
+package hash;
 
 public class No<T> {
     private T valor;
