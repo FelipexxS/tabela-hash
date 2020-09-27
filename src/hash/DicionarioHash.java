@@ -18,4 +18,27 @@ public class DicionarioHash {
         }
     }
 
+    final int funcaoHash(String palavra) {
+        
+        //Calcula o valor do hash da palavra
+        palavra = palavra.toLowerCase();
+        int posicao = palavra.charAt(0);
+        return posicao - 97;
+    }
+
+    final void addTabela(String palavra, String descricao) {
+        Vetor[funcaoHash(palavra)].insereValor(palavra, descricao);
+    }
+
+
+    final void excluirItem(String palavra) {
+        System.out.println("***Itens nesse indice:***\n");
+        Vetor[funcaoHash(palavra)].imprimeLista();
+        Vetor[funcaoHash(palavra)].removeValor(palavra);
+        System.out.println("***Itens nesse indice após excluir:***\n");
+        Vetor[funcaoHash(palavra)].imprimeLista();
+
+    }
+
+
 }

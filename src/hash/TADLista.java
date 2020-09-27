@@ -2,12 +2,12 @@ package hash;
 
 public interface TADLista<T> {
     	
-	//M�todos principais
+	//Metodos principais
 	
 	public void insereValor(T valor, T descricao);
 	public T removeValor(T valor);
 	
-	//M�todos secund�rios
+	//Metodos secundarios
 	
 	public boolean listaVazia();
 	public void imprimeLista();
