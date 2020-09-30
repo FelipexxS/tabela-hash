@@ -18,7 +18,7 @@ public class DicionarioHash {
         }
     }
 
-    final int funcaoHash(String palavra) {
+    public int funcaoHash(String palavra) {
         
         //Calcula o valor do hash da palavra
         palavra = palavra.toLowerCase();
@@ -26,23 +26,33 @@ public class DicionarioHash {
         return posicao - 97;
     }
 
-    final void addTabela(String palavra, String descricao) {
-        Vetor[funcaoHash(palavra)].insereValor(palavra, descricao);
+    public void addTabela(String palavra, String descricao) {
+    	if (Vetor[funcaoHash(palavra)].buscarValor(palavra) == null) {
+    		Vetor[funcaoHash(palavra)].insereValor(palavra, descricao);
+    		return;
+    	}
+    	
+        System.out.println("Chave " + palavra + " j· existe na tabela.");
+        return;
     }
 
 
-    final void excluirItem(String palavra) {
+    public void excluirItem(String palavra) {
         System.out.println("***Itens nesse indice:***\n");
         Vetor[funcaoHash(palavra)].imprimeLista();
         Vetor[funcaoHash(palavra)].removeValor(palavra);
-        System.out.println("***Itens nesse indice ap√≥s excluir:***\n");
+        System.out.println("***Itens nesse indice apos excluir:***\n");
         Vetor[funcaoHash(palavra)].imprimeLista();
 
     }
 
-    final void buscaPalavra(String palavra) {
-        
-        System.out.println(Vetor[funcaoHash(palavra)].buscarValor(palavra).getDescricao());
+    public void buscaPalavra(String palavra) {
+    	if (Vetor[funcaoHash(palavra)].buscarValor(palavra) != null) {
+    		System.out.println(Vetor[funcaoHash(palavra)].buscarValor(palavra).getDescricao());
+    		return;
+    	}
+    	
+    	System.out.println("Chave " + palavra + " n„o localizada na Tabela");
     }
     
 

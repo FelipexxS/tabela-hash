@@ -62,7 +62,6 @@ public class Lista<T> implements TADLista<T> {
 	public No<T> buscarValor(T valor){
 		No<T> noAuxiliar = header;
 		if(listaVazia()){
-			System.out.println("Lista vazia, elemento não encontrado");
 			return null;
 		}
 
@@ -87,7 +86,7 @@ public class Lista<T> implements TADLista<T> {
 	public void imprimeLista() {
 		
 		if (listaVazia()) {
-			System.out.println("lista j� vazia");
+			System.out.println("lista estar vazia");
 			return;
 		}
 		
