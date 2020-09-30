@@ -59,6 +59,22 @@ public class Lista<T> implements TADLista<T> {
 		return noRemovido.getValor();
 	}
 
+	public No<T> buscarValor(T valor){
+		No<T> noAuxiliar = header;
+		if(listaVazia){
+			System.out.println("Lista vazia, elemento não encontrado");
+			return null;
+		}
+
+		while(noAuxiliar.getProximo != null){
+			if(noAuxiliar.getValor == valor){
+				return noAuxiliar;
+			}
+			noAuxiliar = noAuxiliar.getProximo;
+		}
+		return null;
+	}
+
 	@Override
 	public boolean listaVazia() {
 		if(header.getProximo().equals(trailer)) {
