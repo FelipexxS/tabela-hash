@@ -7,8 +7,7 @@ public class App {
         teste.addTabela("EAD", "Pior coisa de 2020");
 		teste.addTabela("Estudar", "Niguém consegue no ead.");
 		
-		teste.excluirItem("palavra");
-		teste.buscaPalavra("palavra");
+		
 
     }
 }

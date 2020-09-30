@@ -42,7 +42,7 @@ public class DicionarioHash {
 
     final void buscaPalavra(String palavra) {
         
-        Vetor[funcaoHash(palavra)].buscarValor(palavra);
+        System.out.println(Vetor[funcaoHash(palavra)].buscarValor(palavra).getDescricao());
     }
     
 
