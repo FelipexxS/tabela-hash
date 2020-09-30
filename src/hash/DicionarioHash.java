@@ -53,6 +53,7 @@ public class DicionarioHash {
     	}
     	
     	System.out.println("Chave " + palavra + " não localizada na Tabela");
+    	return;
     }
     
 
